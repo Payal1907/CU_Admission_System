@@ -9,6 +9,7 @@ CU Admission System is a web-based application that helps manage student admissi
 - 🎓 **Admission Process** – Enroll students in courses based on CUCET scores.
 - 💰 **Scholarship Management** – Identify scholarship recipients.
 - 📊 **Data Visualization** – View student distribution per course/department using charts.
+- 📅 **Database Management** - The database is managed using SQL
 
 ---
 
