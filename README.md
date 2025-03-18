@@ -1,6 +1,7 @@
 # 🎓 CU Admission System
 
 CU Admission System is a web-based application that helps manage student admissions efficiently. The system allows users to register students, manage admissions, and analyze CUCET scores with interactive charts.
+![Website](Website Image.jpg)
 
 ---
 
