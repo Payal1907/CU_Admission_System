@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CU Admission System</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8t8OWz_a8kt_EdZS0tOp7mbCFADUgN0wfn-nrtBPZMJW4MtAn79h8tNATLZhYEwJ7_k8&usqp=CAU" alt="CU Logo" class="logo">
+            <h2>CU Admission</h2>
+            <ul>
+                <li><a href="#register">Register Student</a></li>
+                <li><a href="#admission">Student Admission</a></li>
+                <li><a href="#admissionsList">Admissions List</a></li>
+                <li><a href="#studentsScholarship">Scholarship Recipients</a></li>
+                <li><a href="#sortedCUCET">Sorted CUCET Scores</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h1>University Admission System</h1>
+
+            <div class="grid-container">
+                <!-- Forms Section (Left Side) -->
+                <div class="left-section">
+                    <section id="register">
+                        <h3>Register Student</h3>
+                        <form id="studentForm">
+                            <input type="text" id="name" placeholder="Name" required>
+                            <input type="date" id="dob" required>
+                            <input type="text" id="contact" placeholder="Contact" required>
+                            <input type="email" id="email" placeholder="Email" required>
+                            <button type="button" onclick="registerStudent()">Add Student</button>
+                        </form>
+                    </section>
+
+                    <section id="admission">
+                        <h3>Student Admission</h3>
+                        <form id="admissionForm">
+                            <input type="number" id="student_id" placeholder="Student ID" required>
+                            <select id="course">
+                                <option value="">Select Course</option>
+                            </select>
+                            <input type="number" id="cucet_score" placeholder="CUCET Score" required>
+                            <button type="button" onclick="submitAdmission()">Submit Admission</button>
+                        </form>
+                    </section>
+
+                    <section id="admissionsList">
+                        <h3>Admissions List</h3>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Student ID</th>
+                                    <th>Course ID</th>
+                                    <th>CUCET Score</th>
+                                    <th>Final Fee (₹)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="admissionsTableBody"></tbody>
+                        </table>
+                    </section>
+
+                    <section id="studentsScholarship">
+                        <h3>Scholarship Recipients</h3>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>Final Fee (₹)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="scholarshipTableBody"></tbody>
+                        </table>
+                    </section>
+
+                    <section id="sortedCUCET">
+                        <h3>Students Sorted by CUCET Score</h3>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>CUCET Score</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cucetTableBody"></tbody>
+                        </table>
+                    </section>
+                </div>
+
+                <!-- Charts Section (Right Side) -->
+                <div class="right-section">
+                    <section id="studentsPerCourse">
+                        <h3>Students Per Course</h3>
+                        <canvas id="studentsPerCourseChart"></canvas>
+                    </section>
+
+                    <section id="studentsPerDepartment">
+                        <h3>Students Per Department</h3>
+                        <canvas id="studentsChart"></canvas>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="static/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</body>
+</html>
+
+
+
+
+
