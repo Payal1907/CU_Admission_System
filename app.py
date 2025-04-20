@@ -11,7 +11,7 @@ def get_db_connection():
     return pymysql.connect(
         host=os.getenv("DB_HOST", "localhost"),
         user=os.getenv("DB_USER", "root"),
-        password=os.getenv("DB_PASSWORD", "Pa@190704"),  # Move to .env for security
+        password=os.getenv("DB_PASSWORD", "Password"),  # Move to .env for security
         database=os.getenv("DB_NAME", "CU_Admission"),
         cursorclass=pymysql.cursors.DictCursor
     )
